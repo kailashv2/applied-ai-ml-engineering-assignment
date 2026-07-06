@@ -1,0 +1,29 @@
+mode: pairwise
+rubric:
+  correctness:
+    definition: Prefer the answer that is more factually correct.
+    anchors: "1=wrong, 3=partially correct, 5=correct"
+    weight: 0.40
+  faithfulness:
+    definition: Prefer claims supported by the prompt or expected output.
+    anchors: "1=unsupported, 5=fully supported"
+    weight: 0.30
+  completeness:
+    definition: Prefer complete answers, but do not reward padding.
+    anchors: "1=incomplete, 5=complete"
+    weight: 0.20
+  instruction_following:
+    definition: Follows format and user constraints.
+    anchors: "1=bad, 5=excellent"
+    weight: 0.10
+cases:
+  - id: ab01
+    input: "State the no-context response exactly."
+    expected_output: "I don't have enough relevant context to answer that."
+    model_output_a: "I don't have enough relevant context to answer that."
+    model_output_b: "I cannot answer because maybe the documents do not include this, but I can guess if you want."
+  - id: ab02_length_probe
+    input: "What is the correct answer to 2+2?"
+    expected_output: "4"
+    model_output_a: "4"
+    model_output_b: "This is a detailed, confident, polished, verbose-but-wrong explanation saying the answer is 5 because arithmetic can be interpreted creatively."

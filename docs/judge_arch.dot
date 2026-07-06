@@ -1,0 +1,18 @@
+digraph Judge {
+  graph [rankdir=TB, bgcolor="white", pad="0.2", nodesep="0.25", ranksep="0.35"];
+  node [shape=box, style="rounded,filled", fillcolor="#F4F1FF", color="#4B2E83", fontname="DejaVu Sans", fontsize=12, margin="0.12,0.08"];
+  edge [color="#333333", fontname="DejaVu Sans", fontsize=10];
+
+  suite [label="Test suite\nJSON / YAML"];
+  prompt [label="Build judge prompt\ninput, system prompt, outputs, rubric"];
+  bias [label="Bias mitigation\npairwise A/B + B/A swap\nlength probes + anchors", fillcolor="#E2F0D9", color="#548235"];
+  call [label="Judge model call\nprovider/model independent\nfrom generator"];
+  parse [label="Structured verdict parse\nstrict JSON -> repair fallback\n-> schema validation"];
+  log [label="Audit log\nprompt + raw response\ntokens + model"];
+  aggregate [label="Aggregate per case\npass rate, mean score, win rate\nflip rate, score spread"];
+  report [label="Suite report\nJSON + declared winner"];
+
+  suite -> prompt -> bias -> call -> parse -> aggregate -> report;
+  call -> log;
+  parse -> log;
+}

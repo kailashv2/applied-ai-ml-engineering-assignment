@@ -1,0 +1,34 @@
+{
+  "case_count": 2,
+  "pass_rate": 1.0,
+  "mean_score": 4.65,
+  "score_spread": 0.0,
+  "rows": [
+    {
+      "id": "ab01",
+      "winner_ab": "A",
+      "winner_ba_mapped": "A",
+      "position_flip": false,
+      "overall_score": 4.65,
+      "pass": true,
+      "rationale": "Deterministic local judge verdict for offline reproducibility; hosted judge can be used by changing JUDGE_PROVIDER."
+    },
+    {
+      "id": "ab02_length_probe",
+      "winner_ab": "A",
+      "winner_ba_mapped": "A",
+      "position_flip": false,
+      "overall_score": 4.65,
+      "pass": true,
+      "rationale": "Deterministic local judge verdict for offline reproducibility; hosted judge can be used by changing JUDGE_PROVIDER."
+    }
+  ],
+  "position_bias": {
+    "flip_rate": 0.0,
+    "flips": 0,
+    "n": 2
+  },
+  "mode": "pairwise",
+  "judge_provider": "mock",
+  "judge_model": "claude-3-5-sonnet-latest"
+}

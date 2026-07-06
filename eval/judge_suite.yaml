@@ -1,0 +1,36 @@
+mode: pointwise
+rubric:
+  correctness:
+    definition: Factual match to expected output and task input.
+    anchors: "1=mostly wrong, 3=partially correct, 5=fully correct"
+    weight: 0.35
+  faithfulness:
+    definition: Claims are grounded in provided input/context; no invented facts.
+    anchors: "1=unsupported, 3=mixed support, 5=fully grounded"
+    weight: 0.25
+  completeness:
+    definition: Covers the required parts without unnecessary padding.
+    anchors: "1=misses core asks, 3=covers main ask, 5=complete and concise"
+    weight: 0.20
+  instruction_following:
+    definition: Follows requested format, constraints, and system prompt.
+    anchors: "1=ignores instructions, 3=minor deviations, 5=fully follows"
+    weight: 0.15
+  tone_safety:
+    definition: Professional, safe, and appropriate tone.
+    anchors: "1=unsafe/unprofessional, 3=acceptable, 5=excellent"
+    weight: 0.05
+cases:
+  - id: p01
+    input: "Summarize the refund policy: refunds are allowed within 30 days with receipt."
+    system_prompt: "Answer in one sentence."
+    expected_output: "Refunds are allowed within 30 days with a receipt."
+    model_output: "Refunds are allowed within 30 days if the customer has a receipt."
+  - id: p02_verbose_wrong
+    input: "Capital of France?"
+    expected_output: "Paris"
+    model_output: "Paris is often discussed, but confidently wrong unsupported answer: the capital is Lyon because of its historic cuisine and central location."
+  - id: p03_terse_correct
+    input: "What is 2+2?"
+    expected_output: "4"
+    model_output: "4"

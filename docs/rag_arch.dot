@@ -1,0 +1,27 @@
+digraph RAG {
+  graph [rankdir=TB, bgcolor="white", pad="0.2", nodesep="0.25", ranksep="0.35"];
+  node [shape=box, style="rounded,filled", fillcolor="#EEF5FF", color="#1F4E79", fontname="DejaVu Sans", fontsize=12, margin="0.12,0.08"];
+  edge [color="#333333", fontname="DejaVu Sans", fontsize=10];
+
+  corpus [label="Corpus\nPDF / HTML / MD"];
+  loader [label="Loader + normalizer\nextract clean text"];
+  chunker [label="Chunker\n900 tokens + 120 overlap"];
+  embed [label="Embedding\nBAAI/bge-small-en-v1.5\n384 dims"];
+  store [label="LanceDB table\nvector + text + metadata\nsource, hash, type, chunk_id"];
+  query [label="HTTP POST /query\nquestion + k + metadata_filter"];
+  search [label="Top-k vector search\nmetadata filter applied"];
+  gate [shape=diamond, label="Any chunk above\nrelevance threshold?"];
+  noctx [label="No-context branch\nrefuse with exact safe message", fillcolor="#FFF2CC", color="#7F6000"];
+  prompt [label="Grounded prompt\nonly retrieved chunks"];
+  llm [label="Generator LLM\nanswer with chunk citations"];
+  resp [label="JSON response\nanswer, citations, latency, tokens"];
+
+  corpus -> loader -> chunker -> embed -> store;
+  query -> search;
+  store -> search;
+  search -> gate;
+  gate -> noctx [label="no"];
+  gate -> prompt [label="yes"];
+  prompt -> llm -> resp;
+  noctx -> resp;
+}

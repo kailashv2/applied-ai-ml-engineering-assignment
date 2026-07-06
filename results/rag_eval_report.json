@@ -1,0 +1,206 @@
+{
+  "k": 5,
+  "case_count": 20,
+  "recall_at_k_hit_rate": 1.0,
+  "mrr": 0.925,
+  "ndcg_at_k": 0.9446,
+  "context_precision": 0.5,
+  "retrieval_latency_p50_ms": 13.7,
+  "retrieval_latency_p95_ms": 15.5,
+  "per_case": [
+    {
+      "id": "q01",
+      "hit": true,
+      "rank": 1,
+      "retrieved": [
+        "c0469bc01b525a6fc3d00344aa09eff1",
+        "32a27d815402cb52d3808b9a1f4ae638"
+      ]
+    },
+    {
+      "id": "q02",
+      "hit": true,
+      "rank": 1,
+      "retrieved": [
+        "c0469bc01b525a6fc3d00344aa09eff1",
+        "32a27d815402cb52d3808b9a1f4ae638"
+      ]
+    },
+    {
+      "id": "q03",
+      "hit": true,
+      "rank": 2,
+      "retrieved": [
+        "32a27d815402cb52d3808b9a1f4ae638",
+        "c0469bc01b525a6fc3d00344aa09eff1"
+      ]
+    },
+    {
+      "id": "q04",
+      "hit": true,
+      "rank": 2,
+      "retrieved": [
+        "32a27d815402cb52d3808b9a1f4ae638",
+        "c0469bc01b525a6fc3d00344aa09eff1"
+      ]
+    },
+    {
+      "id": "q05",
+      "hit": true,
+      "rank": 1,
+      "retrieved": [
+        "c0469bc01b525a6fc3d00344aa09eff1",
+        "32a27d815402cb52d3808b9a1f4ae638"
+      ]
+    },
+    {
+      "id": "q06",
+      "hit": true,
+      "rank": 1,
+      "retrieved": [
+        "c0469bc01b525a6fc3d00344aa09eff1",
+        "32a27d815402cb52d3808b9a1f4ae638"
+      ]
+    },
+    {
+      "id": "q07",
+      "hit": true,
+      "rank": 1,
+      "retrieved": [
+        "c0469bc01b525a6fc3d00344aa09eff1",
+        "32a27d815402cb52d3808b9a1f4ae638"
+      ]
+    },
+    {
+      "id": "q08",
+      "hit": true,
+      "rank": 1,
+      "retrieved": [
+        "c0469bc01b525a6fc3d00344aa09eff1",
+        "32a27d815402cb52d3808b9a1f4ae638"
+      ]
+    },
+    {
+      "id": "q09",
+      "hit": true,
+      "rank": 1,
+      "retrieved": [
+        "32a27d815402cb52d3808b9a1f4ae638",
+        "c0469bc01b525a6fc3d00344aa09eff1"
+      ]
+    },
+    {
+      "id": "q10",
+      "hit": true,
+      "rank": 1,
+      "retrieved": [
+        "32a27d815402cb52d3808b9a1f4ae638",
+        "c0469bc01b525a6fc3d00344aa09eff1"
+      ]
+    },
+    {
+      "id": "q11",
+      "hit": true,
+      "rank": 1,
+      "retrieved": [
+        "32a27d815402cb52d3808b9a1f4ae638",
+        "c0469bc01b525a6fc3d00344aa09eff1"
+      ]
+    },
+    {
+      "id": "q12",
+      "hit": true,
+      "rank": 1,
+      "retrieved": [
+        "32a27d815402cb52d3808b9a1f4ae638",
+        "c0469bc01b525a6fc3d00344aa09eff1"
+      ]
+    },
+    {
+      "id": "q13",
+      "hit": true,
+      "rank": 1,
+      "retrieved": [
+        "32a27d815402cb52d3808b9a1f4ae638",
+        "c0469bc01b525a6fc3d00344aa09eff1"
+      ]
+    },
+    {
+      "id": "q14",
+      "hit": true,
+      "rank": 1,
+      "retrieved": [
+        "32a27d815402cb52d3808b9a1f4ae638",
+        "c0469bc01b525a6fc3d00344aa09eff1"
+      ]
+    },
+    {
+      "id": "q15",
+      "hit": true,
+      "rank": 1,
+      "retrieved": [
+        "32a27d815402cb52d3808b9a1f4ae638",
+        "c0469bc01b525a6fc3d00344aa09eff1"
+      ]
+    },
+    {
+      "id": "q16",
+      "hit": true,
+      "rank": 1,
+      "retrieved": [
+        "c0469bc01b525a6fc3d00344aa09eff1",
+        "32a27d815402cb52d3808b9a1f4ae638"
+      ]
+    },
+    {
+      "id": "q17",
+      "hit": true,
+      "rank": 1,
+      "retrieved": [
+        "c0469bc01b525a6fc3d00344aa09eff1",
+        "32a27d815402cb52d3808b9a1f4ae638"
+      ]
+    },
+    {
+      "id": "q18",
+      "hit": true,
+      "rank": 2,
+      "retrieved": [
+        "c0469bc01b525a6fc3d00344aa09eff1",
+        "32a27d815402cb52d3808b9a1f4ae638"
+      ]
+    },
+    {
+      "id": "q19",
+      "hit": true,
+      "rank": 1,
+      "retrieved": [
+        "c0469bc01b525a6fc3d00344aa09eff1",
+        "32a27d815402cb52d3808b9a1f4ae638"
+      ]
+    },
+    {
+      "id": "q20",
+      "hit": true,
+      "rank": 1,
+      "retrieved": [
+        "32a27d815402cb52d3808b9a1f4ae638",
+        "c0469bc01b525a6fc3d00344aa09eff1"
+      ]
+    }
+  ],
+  "answer_quality": {
+    "faithfulness_groundedness_mean_1_to_5": 4.55,
+    "answer_relevance_mean_1_to_5": 4.35,
+    "method": "LLM judge over 20 fixed questions; mock report included, regenerate with JUDGE_PROVIDER for hosted judge.",
+    "em": "N/A - multi-sentence answers, no single-span gold",
+    "f1": "N/A - multi-sentence answers, no single-span gold"
+  },
+  "cost_assumptions": {
+    "embedding_dim": 384,
+    "bytes_per_float32_vector": 1536,
+    "estimated_total_bytes_per_vector_with_metadata": 2100,
+    "query_volume_per_month": 100000,
+    "managed_db_model": "representative managed serverless vector DB with monthly minimum and read/write/storage usage"
+  }
+}

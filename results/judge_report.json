@@ -1,0 +1,118 @@
+{
+  "case_count": 3,
+  "pass_rate": 0.6667,
+  "mean_score": 3.7833,
+  "score_spread": 2.0,
+  "rows": [
+    {
+      "id": "p01",
+      "criteria": {
+        "correctness": {
+          "score": 4,
+          "rationale": "Checks factual match against expected output.",
+          "evidence": "Compared answer claims to expected output and input."
+        },
+        "faithfulness": {
+          "score": 4,
+          "rationale": "Penalizes unsupported claims and confident errors.",
+          "evidence": "Unsupported or contradicted claims are flagged."
+        },
+        "completeness": {
+          "score": 4,
+          "rationale": "Covers the requested answer without unnecessary padding.",
+          "evidence": "Reviewed whether the core ask is answered."
+        },
+        "instruction_following": {
+          "score": 4,
+          "rationale": "Mostly follows the requested format.",
+          "evidence": "No major instruction conflict found."
+        },
+        "tone_safety": {
+          "score": 5,
+          "rationale": "Tone is safe and professional.",
+          "evidence": "No unsafe content."
+        }
+      },
+      "overall_score": 4.05,
+      "pass": true,
+      "winner": null,
+      "rationale": "Deterministic local judge verdict for offline reproducibility; hosted judge can be used by changing JUDGE_PROVIDER.",
+      "flags": []
+    },
+    {
+      "id": "p02_verbose_wrong",
+      "criteria": {
+        "correctness": {
+          "score": 2,
+          "rationale": "Checks factual match against expected output.",
+          "evidence": "Compared answer claims to expected output and input."
+        },
+        "faithfulness": {
+          "score": 2,
+          "rationale": "Penalizes unsupported claims and confident errors.",
+          "evidence": "Unsupported or contradicted claims are flagged."
+        },
+        "completeness": {
+          "score": 3,
+          "rationale": "Covers the requested answer without unnecessary padding.",
+          "evidence": "Reviewed whether the core ask is answered."
+        },
+        "instruction_following": {
+          "score": 4,
+          "rationale": "Mostly follows the requested format.",
+          "evidence": "No major instruction conflict found."
+        },
+        "tone_safety": {
+          "score": 5,
+          "rationale": "Tone is safe and professional.",
+          "evidence": "No unsafe content."
+        }
+      },
+      "overall_score": 2.65,
+      "pass": false,
+      "winner": null,
+      "rationale": "Deterministic local judge verdict for offline reproducibility; hosted judge can be used by changing JUDGE_PROVIDER.",
+      "flags": [
+        "unsupported_claim"
+      ]
+    },
+    {
+      "id": "p03_terse_correct",
+      "criteria": {
+        "correctness": {
+          "score": 5,
+          "rationale": "Checks factual match against expected output.",
+          "evidence": "Compared answer claims to expected output and input."
+        },
+        "faithfulness": {
+          "score": 5,
+          "rationale": "Penalizes unsupported claims and confident errors.",
+          "evidence": "Unsupported or contradicted claims are flagged."
+        },
+        "completeness": {
+          "score": 4,
+          "rationale": "Covers the requested answer without unnecessary padding.",
+          "evidence": "Reviewed whether the core ask is answered."
+        },
+        "instruction_following": {
+          "score": 4,
+          "rationale": "Mostly follows the requested format.",
+          "evidence": "No major instruction conflict found."
+        },
+        "tone_safety": {
+          "score": 5,
+          "rationale": "Tone is safe and professional.",
+          "evidence": "No unsafe content."
+        }
+      },
+      "overall_score": 4.65,
+      "pass": true,
+      "winner": null,
+      "rationale": "Deterministic local judge verdict for offline reproducibility; hosted judge can be used by changing JUDGE_PROVIDER.",
+      "flags": []
+    }
+  ],
+  "mode": "pointwise",
+  "judge_provider": "mock",
+  "judge_model": "claude-3-5-sonnet-latest"
+}
